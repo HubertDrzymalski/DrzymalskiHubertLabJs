@@ -149,26 +149,35 @@
 					<td id="pytanie2"></td>
 					<td><input type="text" id="odp2in" name="odp2in"></td>
 				  </tr>
+				  <tr>
+					<td id="pytanie3"></td>
+					<td><input type="text" id="odp3in" name="odp3in"></td>
+				  </tr>
 				</table>
 				<INPUT TYPE="button" NAME="button" Value="Przeslij" onClick=results()>;
 				</form>
 				<script id="dane">
 				let questions = [
-				['Ile to jest jeden?',1],
-				['Ile to jest dwa?',2],
-				['Ile to jest trzy?',3],
+				['Ile dni ma tydzien?',7],
+				['Ile godzin ma dzien?',24],
+				['Ile minut ma godzina?',60],
+				['Ile sekund ma minuta',60],
 				];
-				for(let i=0;i<3;i++){
+				for(let i=0;i<4;i++){
 				document.getElementById("pytanie"+i).innerHTML=questions[i][0];
 				}
 				</script>
 				<SCRIPT>
 				function results() {
-					let answers = [document.getElementById("odp0in").value,document.getElementById("odp1in").value,document.getElementById("odp2in").value];
+					let answers = [document.getElementById("odp0in").value,document.getElementById("odp1in").value,document.getElementById("odp2in").value,document.getElementById("odp3in").value];
 					let result=0;
-					for(let i=0;i<3;i++){
-					if(answers[i]==questions[i][1])
+					for(let i=0;i<4;i++){
+					if(answers[i]==questions[i][1]){
 					result++;
+					document.getElementById("odp"+i+"in").style.backgroundColor = 'green'
+					}
+					else
+					document.getElementById("odp"+i+"in").style.backgroundColor = 'red'
 					}
 					alert("Ilosc poprawnych odpowiedzi : "+result+"  !!!");
 				}
