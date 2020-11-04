@@ -141,7 +141,10 @@
 				<br>
 				<p class="pq">poteżny tekst</p>
 				<span class="pq">turbo cytat</span>
-				
+				<button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				data-page="one" data-dismiss="modal" aria-hidden="true" id="firstBtn">Kliknij mnie!</button>
+	
+							
 
 				<script>
 				$(document).ready(function() {$('span.pq')}); // koniec funkcji ready
@@ -163,6 +166,12 @@
                     varmessage = "<p>Wskazałeś odnśnik mysza!</p>"
                     $('#main').append(varmessage);
                 });
+			</script>
+
+			<script>
+				$('#guzik').click(function(){
+					$(this).val("zostalem klikniety")
+				})
 			</script>
 
 
