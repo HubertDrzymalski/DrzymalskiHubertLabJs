@@ -129,56 +129,110 @@
 		</div>
 	</section>
 <!-- ssssssssssssssssssssssssssssssss -->
-	<section id="main">
-
-	</section>
 <!-- sssssssssssssssssssssssssssssssssssss -->
 	<section id="projekt1">
 		<div class="container">
 			<div class="jumbotron">
-				<h1>Projekt 1</h1>
-				<a href="" id="link">Odnośniczek</a>
-				<br>
-				<p class="pq">poteżny tekst</p>
-				<span class="pq">turbo cytat</span>
+				<h1>Projekt 3</h1>
 				<button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
-				data-page="one" data-dismiss="modal" aria-hidden="true" id="firstBtn">Kliknij mnie!</button>
-	
-							
-
-				<script>
-				$(document).ready(function() {$('span.pq')}); // koniec funkcji ready
-				$('span.pq').each(function() {
-					let quote=$(this).clone();
-					quote.addClass('pullquote');
-					$(this).before(quote);
-				});
-				</script>
-			<script>
-				$("body").dblclick(function(){
-					alert("zrobiles dabel klik");
-				})
-
-			</script>
-
-			<script>
-				$("#link").mouseover(function () {
-                    varmessage = "<p>Wskazałeś odnśnik mysza!</p>"
-                    $('#main').append(varmessage);
-                });
-			</script>
-
-			<script>
-				$('#guzik').click(function(){
-					$(this).val("zostalem klikniety")
-				})
-			</script>
-
+				data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik1">Kliknij mnie!</button>
+				<button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik2">Kliknij mnie!</button>
+				<button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik3">Kliknij mnie!</button>
+				<button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik4">Kliknij mnie!</button>
+				<button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik5">Kliknij mnie!</button>
+				<button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik6">Kliknij mnie!</button>
+				<button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik7">Kliknij mnie!</button>
+				<button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik8">Kliknij mnie!</button>
+				<button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik9">Kliknij mnie!</button>
+				<button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik10">Kliknij mnie!</button>
 
 			</div>
 		</div>
 	</section>
+	<script>
+	$('#guzik1').click(function() {
 
+		$('body').each(function() {
+			$(this).addClass('styl1');
+		});
+		$(this).text("Jestem kliknięty");
+	});
+
+	$('#guzik2').click(function() {
+	$('p').each(function() {
+		$(this).addClass('styl2');
+	});
+	$(this).text("Jestem kliknięty");
+	});
+
+	$('#guzik3').click(function() {
+	$('button').each(function() {
+		$(this).addClass('styl3');
+	});
+	$(this).text("Jestem kliknięty");
+	});
+
+	$('#guzik4').click(function() {
+	$('body').each(function() {
+		$(this).addClass('styl4');
+	});
+	$(this).text("Jestem kliknięty");
+	});
+
+	$('#guzik5').click(function() {
+	$('#main-page').each(function() {
+		$(this).addClass('styl5');
+	});
+	$(this).text("Jestem kliknięty");
+	});
+
+	$('#guzik6').click(function() {
+	$('body').each(function() {
+		$(this).addClass('styl6');
+	});
+	$(this).text("Jestem kliknięty");
+	});
+
+	$('#guzik7').click(function() {
+	$('body').each(function() {
+		$(this).addClass('styl7');
+	});
+	$(this).text("Jestem kliknięty");
+	});
+
+	$('#guzik8').click(function() {
+	$('body').each(function() {
+		$(this).addClass('styl8');
+	});
+	$(this).text("Jestem kliknięty");
+	});
+
+	$('#guzik9').click(function() {
+	$('p').each(function() {
+		$(this).addClass('styl9');
+	});
+	$(this).text("Jestem kliknięty");
+	});
+
+	$('#guzik10').click(function() {
+	$('div').each(function() {
+		$(this).addClass('styl10');
+	});
+	$(this).text("Jestem kliknięty");
+	});
+
+
+
+	</script>
 	<footer>
 		<div class="container" style="margin-top: 5%">
 			<button type="button" class="btn btn-link" data-toggle="modal"

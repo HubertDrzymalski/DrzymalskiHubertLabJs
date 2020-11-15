@@ -29,3 +29,37 @@
     font-style: arial;
     background-color: aqua;
 }
+button{
+    margin-top: 10px;
+}
+.styl1{
+    background-color: red;
+}
+.styl2{
+    font-size: 20px;
+    font-style: italic;
+}
+.styl3{
+    background-color: cyan;
+}
+.styl4{
+    background-image: linear-gradient(red,white)
+}
+.styl5{
+    color: blueviolet;
+}
+.styl6{
+    float: right;
+}
+.styl7{
+    float: left;
+}
+.styl8{
+    padding: 200px;
+}
+.styl9{
+    margin-top: 200px;
+}
+.styl10{
+    background-color: black;
+}
