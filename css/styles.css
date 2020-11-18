@@ -40,7 +40,9 @@ button{
     font-style: italic;
 }
 .styl3{
-    background-color: cyan;
+    font-size: 50px;
+    font-style: italic;
+    background-color: blue;
 }
 .styl4{
     background-image: linear-gradient(red,white)
@@ -49,17 +51,23 @@ button{
     color: blueviolet;
 }
 .styl6{
-    float: right;
+    text-decoration: underline;
 }
 .styl7{
-    float: left;
+    background-image: linear-gradient(Aqua,Yellow)
 }
 .styl8{
-    padding: 200px;
+    background-color: black;
 }
 .styl9{
-    margin-top: 200px;
+    background-image: linear-gradient(purple,gray)
 }
-.styl10{
-    background-color: black;
+
+td{
+    height: 150px;
+    width: 25%;
+}
+default{
+    background-color: transparent;
+    font-style: arial;
 }

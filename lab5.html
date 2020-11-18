@@ -134,13 +134,108 @@
 	<section id="projekt1">
 		<div class="container">
 			<div class="jumbotron">
-				<h1>Projekt 3</h1>
+				<h1>Projekt 4</h1>
 				
+				<table class="table table-bordered">
+					<tbody>
+					  <tr>
+						<td>Nerver 3</td>
+						<td>Gonna</td>
+						<td><p>Give 3</p></td>
+					  </tr>
+					  <tr>
+						<td>You</td>
+						<td>Up 3</td>
+						<td><p>Up</p></td>
+					  </tr>
+					  <tr>
+						<td>Gonna 3</td>
+						<td><a href = "github.com">Linek</a></td>
+						<td>Let 3</td>
+					  </tr>
+					</tbody>
+				  </table>
+
+				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik1">Zmienia kolor wierszy</button>
+				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik2">Zmienia czcionke w wierszach na Italic</button>
+				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik3">Zwiększa rozmiar czcionki i kolor</button>
+				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik4">Ustawia gradient</button>
+				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik5">Ustawia kolor w elemencie </button>
+				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik6">Ustawia podkresla text w elemencie</button>
+				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik7">Ustawia gradient</button>
+				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik8">Zmienia kolor kolumn</button>
+				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik9">Zmienia kolor calej tabeli</button>
 
 			</div>
 		</div>
+
+		<script>
+			$('#guzik1').click(function() {
+				$('tr:odd').each(function() {
+					$(this).addClass('styl1');
+				});
+			});
+		
+			$('#guzik2').click(function() {
+			$('tr:even').each(function() {
+				$(this).addClass('styl2');
+			});
+			});
+		
+			$('#guzik3').click(function() {
+			$('a[href*="github.com"]').each(function() {
+				$(this).addClass('styl3');
+			});
+			});
+		
+			$('#guzik4').click(function() {
+			$('td:contains(Gonna)').each(function() {
+				$(this).addClass('styl4');
+			});
+			});
+		
+			$('#guzik5').click(function() {
+			$('td:first').each(function() {
+				$(this).addClass('styl5');
+			});
+			});
+		
+			$('#guzik6').click(function() {
+			$('td:last').each(function() {
+				$(this).addClass('styl6');
+			});
+			});
+		
+			$('#guzik7').click(function() {
+			$('tbody>tr:contains(Let)').each(function() {
+				$(this).addClass('styl7');
+			});
+			});
+		
+			$('#guzik8').click(function() {
+			$('td+td').each(function() {
+				$(this).addClass('styl8');
+			});
+			});
+		
+			$('#guzik9').click(function() {
+			$('table').each(function() {
+				$(this).addClass('styl9');
+			});
+			});
+			</script>
+
 	</section>
-	
+
 	<footer>
 		<div class="container" style="margin-top: 5%">
 			<button type="button" class="btn btn-link" data-toggle="modal"
