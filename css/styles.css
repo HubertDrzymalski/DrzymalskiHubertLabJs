@@ -36,31 +36,28 @@ button{
     background-color: red;
 }
 .styl2{
-    font-size: 20px;
-    font-style: italic;
+    background-color: purple;
 }
 .styl3{
-    font-size: 50px;
-    font-style: italic;
     background-color: blue;
 }
 .styl4{
-    background-image: linear-gradient(red,white)
+    background-color: yellow;
 }
 .styl5{
-    color: blueviolet;
+    background-color: deepskyblue;
 }
 .styl6{
-    text-decoration: underline;
+    background-color: salmon;
 }
 .styl7{
-    background-image: linear-gradient(Aqua,Yellow)
+    background-color: lawngreen;
 }
 .styl8{
-    background-color: black;
+    background-color: antiquewhite;
 }
 .styl9{
-    background-image: linear-gradient(purple,gray)
+    background-color: violet;
 }
 
 td{
@@ -68,6 +65,6 @@ td{
     width: 25%;
 }
 default{
-    background-color: transparent;
+    background-color: white;
     font-style: arial;
 }

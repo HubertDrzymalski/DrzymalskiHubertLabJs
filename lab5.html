@@ -157,81 +157,253 @@
 				  </table>
 
 				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
-				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik1">Zmienia kolor wierszy</button>
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik1">Nierowne wiersze</button>
 				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
-				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik2">Zmienia czcionke w wierszach na Italic</button>
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik2">Rowne wiersze</button>
 				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
-				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik3">Zwiększa rozmiar czcionki i kolor</button>
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik3">Zmienia styl linku</button>
 				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
-				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik4">Ustawia gradient</button>
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik4">Komórki zawierające "Gonna"</button>
 				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
-				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik5">Ustawia kolor w elemencie </button>
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik5">Pierwszy element</button>
 				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
-				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik6">Ustawia podkresla text w elemencie</button>
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik6">Ostatni element</button>
 				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
-				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik7">Ustawia gradient</button>
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik7">Dziecko tbody>tr zawierające "Let"</button>
 				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
-				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik8">Zmienia kolor kolumn</button>
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik8">Dwa znaczniki "td" obok siebie</button>
 				  <button style="font-size: 32px;" type="button" class="btn btn-info show-page modal-btn"
-				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik9">Zmienia kolor calej tabeli</button>
+				  data-page="one" data-dismiss="modal" aria-hidden="true" id="guzik9">Cala tabela</button>
 
 			</div>
 		</div>
 
 		<script>
-			$('#guzik1').click(function() {
-				$('tr:odd').each(function() {
-					$(this).addClass('styl1');
-				});
-			});
+
+			/////////////////////////////////
+					$(document).ready(function () {
+						let clicked1 = 0;
+
+						$('#guzik1').click(function () {
+
+							if (clicked1 == 0) {
+								clicked1 = 1;
+
+								$("tr:odd").addClass('styl1');
+								$("tr:odd").fadeOut(1000);
+								$("#guzik1").css("background-color", "red");
+							}
+							else {
+								clicked1 = 0;
+								$("tr:odd").fadeIn(300);
+								$("tr:odd").css("background-color","transparent")
+								$("#guzik1").css("background-color", "#5bc0de");
+							}
+
+						});
+
+					});
+			//////////////////////////////////
+
+
+
+			////////////////////////////////////
+
+			$(document).ready(function () {
+						let clicked1 = 0;
+
+						$('#guzik2').click(function () {
+
+							if (clicked1 == 0) {
+								clicked1 = 1;
+
+								$("tr:even").addClass('styl2');
+								$("tr:even").fadeOut(4000);
+								$("#guzik2").css("background-color", "red");
+							}
+							else {
+								clicked1 = 0;
+								$("tr:even").css("background-color","transparent")
+								$("tr:even").fadeIn(100);
+								$("#guzik2").css("background-color", "#5bc0de");
+							}
+
+						});
+
+					});
+
+			///////////////////////////////////
 		
-			$('#guzik2').click(function() {
-			$('tr:even').each(function() {
-				$(this).addClass('styl2');
-			});
-			});
+
+			//////////////////////////////////
+
+			$(document).ready(function () {
+						let clicked1 = 0;
+
+						$('#guzik3').click(function () {
+
+							if (clicked1 == 0) {
+								clicked1 = 1;
+
+								$('a[href*="github.com"]').addClass('styl3');
+								$('a[href*="github.com"]').fadeOut(4000);
+								$("#guzik3").css("background-color", "red");
+							}
+							else {
+								clicked1 = 0;
+								$('a[href*="github.com"]').fadeIn(100);
+								$('a[href*="github.com"]').css("background-color","transparent")
+								$("#guzik3").css("background-color", "#5bc0de");
+							}
+
+						});
+
+					});
+
+
+			$(document).ready(function () {
+						let clicked1 = 0;
+
+						$('#guzik4').click(function () {
+
+							if (clicked1 == 0) {
+								clicked1 = 1;
+
+								$('td:contains(Gonna)').addClass('styl4');
+								$('td:contains(Gonna)').fadeOut(4000);
+								$("#guzik4").css("background-color", "red");
+							}
+							else {
+								clicked1 = 0;
+								$('td:contains(Gonna)').css("background-color","transparent")
+								$('td:contains(Gonna)').fadeIn(1000);
+								$("#guzik4").css("background-color", "#5bc0de");
+							}
+
+						});
+
+					});
+			///////////////////////////////////////////
 		
-			$('#guzik3').click(function() {
-			$('a[href*="github.com"]').each(function() {
-				$(this).addClass('styl3');
-			});
-			});
+			$(document).ready(function () {
+						let clicked1 = 0;
+
+						$('#guzik5').click(function () {
+
+							if (clicked1 == 0) {
+								clicked1 = 1;
+
+								$('td:first').addClass('styl5');
+								$('td:first').fadeOut(4000);
+								$("#guzik5").css("background-color", "red");
+							}
+							else {
+								clicked1 = 0;
+								$('td:first').css("background-color","transparent")
+								$('td:first').fadeIn(1000);
+								$("#guzik5").css("background-color", "#5bc0de");
+							}
+
+						});
+
+					});
 		
-			$('#guzik4').click(function() {
-			$('td:contains(Gonna)').each(function() {
-				$(this).addClass('styl4');
-			});
-			});
+
+			$(document).ready(function () {
+						let clicked1 = 0;
+
+						$('#guzik6').click(function () {
+
+							if (clicked1 == 0) {
+								clicked1 = 1;
+
+								$('td:last').addClass('styl6');
+								$('td:last').fadeOut(4000);
+								$("#guzik6").css("background-color", "red");
+							}
+							else {
+								clicked1 = 0;
+								$('td:last').css("background-color","transparent")
+								$('td:last').fadeIn(1000);
+								$("#guzik6").css("background-color", "#5bc0de");
+							}
+
+						});
+
+					});
 		
-			$('#guzik5').click(function() {
-			$('td:first').each(function() {
-				$(this).addClass('styl5');
-			});
-			});
+
+			$(document).ready(function () {
+						let clicked1 = 0;
+
+						$('#guzik7').click(function () {
+
+							if (clicked1 == 0) {
+								clicked1 = 1;
+
+								$('tbody>tr:contains(Let)').addClass('styl7');
+								$('tbody>tr:contains(Let)').fadeOut(4000);
+								$("#guzik7").css("background-color", "red");
+							}
+							else {
+								clicked1 = 0;
+								$('tbody>tr:contains(Let)').css("background-color","transparent")
+								$('tbody>tr:contains(Let)').fadeIn(1000);
+								$("#guzik7").css("background-color", "#5bc0de");
+							}
+
+						});
+
+					});
 		
-			$('#guzik6').click(function() {
-			$('td:last').each(function() {
-				$(this).addClass('styl6');
-			});
-			});
+
+			
+			$(document).ready(function () {
+						let clicked1 = 0;
+
+						$('#guzik8').click(function () {
+
+							if (clicked1 == 0) {
+								clicked1 = 1;
+
+								$('td+td').addClass('styl8');
+								$('td+td').fadeOut(4000);
+								$("#guzik8").css("background-color", "red");
+							}
+							else {
+								clicked1 = 0;
+								$('td+td').css("background-color","transparent")
+								$('td+td').fadeIn(1000);
+								$("#guzik8").css("background-color", "#5bc0de");
+							}
+
+						});
+
+					});
 		
-			$('#guzik7').click(function() {
-			$('tbody>tr:contains(Let)').each(function() {
-				$(this).addClass('styl7');
-			});
-			});
-		
-			$('#guzik8').click(function() {
-			$('td+td').each(function() {
-				$(this).addClass('styl8');
-			});
-			});
-		
-			$('#guzik9').click(function() {
-			$('table').each(function() {
-				$(this).addClass('styl9');
-			});
-			});
+			$(document).ready(function () {
+						let clicked1 = 0;
+
+						$('#guzik9').click(function () {
+
+							if (clicked1 == 0) {
+								clicked1 = 1;
+
+								$('table').addClass('styl9');
+								$('table').fadeOut(100);
+								$("#guzik9").css("background-color", "red");
+							}
+							else {
+								clicked1 = 0;
+								$('table').css("background-color","transparent")
+								$('table').fadeIn(100);
+								$("#guzik9").css("background-color", "#5bc0de");
+							}
+
+						});
+
+					});
+
 			</script>
 
 	</section>
